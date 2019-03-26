@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="title">Information</div>
+  <div class="system-info">
     <div class="items">
       <div class="item">
         <div class="name">Path:</div>
@@ -31,30 +30,30 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        electron: process.versions.electron,
-        name: this.$route.name,
-        node: process.versions.node,
-        path: this.$route.path,
-        platform: require('os').platform(),
-        vue: require('vue/package.json').version
-      }
+export default {
+  data () {
+    return {
+      electron: process.versions.electron,
+      name: this.$route.name,
+      node: process.versions.node,
+      path: this.$route.path,
+      platform: require('os').platform(),
+      vue: require('vue/package.json').version
     }
   }
+}
 </script>
 
-<style scoped>
-  .title {
-    color: #888;
-    font-size: 18px;
-    font-weight: initial;
-    letter-spacing: .25px;
-    margin-top: 10px;
+<style lang="scss" scoped>
+.system-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  background:rgba(0,0,0,0.2);
+  .items {
+    margin-top: 8px;
   }
-
-  .items { margin-top: 8px; }
 
   .item {
     display: flex;
@@ -70,4 +69,5 @@
     color: #35495e;
     font-weight: bold;
   }
+}
 </style>
