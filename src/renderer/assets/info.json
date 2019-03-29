@@ -1,0 +1,172 @@
+{
+  "apiList": [
+    {
+      "description": "获取门店环境图列表",
+      "origin": "node",
+      "detail": "",
+      "encryptionOnly": false,
+      "groupOwner": "王柯迪",
+      "groupName": "node_store",
+      "methodName": "node_store.getStoreEnvPictures",
+      "methodOwner": "陈志祥",
+      "needVerify": false,
+      "returnType": "Api_STORE_StoreEnvPicturePage_Node",
+      "securityLevel": "Anonym",
+      "state": "OPEN",
+      "parameterInfoList": [
+        {
+          "description": "门店ID",
+          "injectOnly": false,
+          "isList": false,
+          "isRequired": true,
+          "isRsaEncrypt": false,
+          "name": "storeId",
+          "sequence": "",
+          "type": "int"
+        },
+        {
+          "description": "分页参数",
+          "injectOnly": false,
+          "isList": false,
+          "isRequired": false,
+          "isRsaEncrypt": false,
+          "name": "page",
+          "sequence": "",
+          "type": "Api_STORE_PageParameter_Node"
+        }
+      ],
+      "reqStructList": [
+        {
+          "fieldList": [
+            {
+              "desc": "记录偏移量",
+              "isList": false,
+              "name": "offset",
+              "type": "int"
+            },
+            {
+              "desc": "返回记录最大数量",
+              "isList": false,
+              "name": "limit",
+              "type": "int"
+            }
+          ],
+          "groupName": "node_store",
+          "name": "Api_STORE_PageParameter_Node"
+        }
+      ],
+      "respStructList": [
+        {
+          "fieldList": [
+            {
+              "desc": "门店环境图列表",
+              "isList": true,
+              "name": "storeEnvPictureList",
+              "type": "Api_STORE_StoreEnvPicture_Node"
+            },
+            {
+              "desc": "门店环境图总数",
+              "isList": false,
+              "name": "total",
+              "type": "int"
+            }
+          ],
+          "groupName": "node_store",
+          "name": "Api_STORE_StoreEnvPicturePage_Node"
+        },
+        {
+          "fieldList": [
+            {
+              "desc": "图片URL",
+              "isList": false,
+              "name": "picUrl",
+              "type": "string"
+            },
+            {
+              "desc": "是否是封面图",
+              "isList": false,
+              "name": "isSurfacePlot",
+              "type": "boolean"
+            },
+            {
+              "desc": "高",
+              "isList": false,
+              "name": "height",
+              "type": "int"
+            },
+            {
+              "desc": "宽",
+              "isList": false,
+              "name": "width",
+              "type": "int"
+            }
+          ],
+          "groupName": "node_store",
+          "name": "Api_STORE_StoreEnvPicture_Node"
+        }
+      ]
+    },
+    {
+      "description": "内容点赞/取消赞",
+      "origin": "node",
+      "detail": "",
+      "encryptionOnly": false,
+      "groupOwner": "王柯迪",
+      "groupName": "node_yitShopContentService",
+      "methodName": "node_yitShopContentService.likePost",
+      "methodOwner": "陈志祥",
+      "needVerify": false,
+      "returnType": "Api_BoolResp_Node",
+      "securityLevel": "User",
+      "state": "OPEN",
+      "parameterInfoList": [
+        {
+          "description": "内容类型:AT美学实验室,ATV美学实验室心得,SF二楼视频,YITCOM生活馆内容",
+          "injectOnly": false,
+          "isList": false,
+          "isRequired": true,
+          "isRsaEncrypt": false,
+          "name": "type",
+          "sequence": "",
+          "type": "string"
+        },
+        {
+          "description": "被点赞的实体id",
+          "injectOnly": false,
+          "isList": false,
+          "isRequired": true,
+          "isRsaEncrypt": false,
+          "name": "entityId",
+          "sequence": "",
+          "type": "long"
+        },
+        {
+          "description": "true代表喜欢,false代表不喜欢",
+          "injectOnly": false,
+          "isList": false,
+          "isRequired": true,
+          "isRsaEncrypt": false,
+          "name": "isLike",
+          "sequence": "",
+          "type": "boolean"
+        }
+      ],
+      "reqStructList": [],
+      "respStructList": [
+        {
+          "fieldList": [
+            {
+              "desc": "布尔类型返回值",
+              "isList": false,
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "groupName": "node_yitShopContentService",
+          "name": "Api_BoolResp_Node"
+        }
+      ]
+    }
+  ],
+  "codeList": []
+}

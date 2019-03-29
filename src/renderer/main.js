@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import axios from 'axios'
-import { 
-  Button, 
+import { webFrame } from 'electron'
+import {
+  Button,
   Form,
   FormItem,
   Input,
-  Row, 
-  Col, 
+  Row,
+  Col,
   Radio,
   Autocomplete,
   Dropdown,
@@ -15,6 +16,8 @@ import {
   Message,
   Select,
   Option,
+  Container,
+  Aside,
 } from 'element-ui'
 
 import App from './App'
@@ -39,6 +42,11 @@ Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Container)
+Vue.use(Aside)
+
+webFrame.setVisualZoomLevelLimits(1, 1)
+webFrame.setLayoutZoomLevelLimits(0, 0)
 
 Vue.prototype.$message = Message;
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, Tray } from 'electron'
 
 /**
  * Set `__static` path to static files in production
@@ -23,7 +23,15 @@ function createWindow () {
     height: 563,
     useContentSize: true,
     width: 1000,
-    // titleBarStyle: 'hidden'
+    title:'yit-oss',
+    titleBarStyle:'hidden',
+    frame: false,
+    resizable: false,
+    transparent: true,
+    vibrancy: 'ultra-dark',
+    webPreferences: {
+      backgroundThrottling: false
+    }
   })
 
   mainWindow.loadURL(winURL)
@@ -31,6 +39,9 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
+
+  const appIcon = new Tray(require('path').join(__dirname, '../renderer/assets/upload.png'));
+  appIcon.setToolTip('my best app');
 }
 
 app.on('ready', createWindow)
