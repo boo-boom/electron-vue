@@ -258,7 +258,7 @@ const _parseBlockElements = function (indexApiBlocks, detectedElements, filename
       parsedBlocks.push(blockData);
   }
 
-  console.log(parsedBlocks)
+  // console.log(parsedBlocks)
   return parsedBlocks;
 };
 
@@ -280,6 +280,7 @@ const parser = function (filename, encoding) {
   const indexApiBlocks = _findBlockWithApiGetIndex(elements);
   if (indexApiBlocks.length === 0) return;
 
+  // console.log(parsers.api.parse(elements[0][0].content))
   return _parseBlockElements(indexApiBlocks, elements, _filename);
 };
 
