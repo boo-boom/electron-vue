@@ -1,0 +1,156 @@
+[
+  {
+    "type"       : "post",
+    "url"        : "node_aestheticslab.getReviewDetail",
+    "title"      : "getReviewDetail",
+    "description": "\"title\":\"美学实验室心得详情\",\n\"groupOwner\":\"王柯迪\",\n\"methodOwner\":\"陈志祥\",\n\"securityLevel\":\"Anonym\",\n\"returnType\":\"Api_AESTHETICSLAB_ReviewDetailResp_Node\",\n\"state\":\"OPEN\",\n\"detail\":null,\n\"encryptionOnly\":false,\n\"needVerify\":false",
+    "group"      : "node_aestheticslab",
+    "parameter"  : {
+      "fields": {
+        "Parameter": [
+          {
+            "group"      : "Parameter",
+            "type"       : "long",
+            "optional"   : false,
+            "field"      : "reviewId",
+            "description": "讲座id"
+          },
+          {
+            "group"      : "Parameter",
+            "type"       : "int",
+            "optional"   : false,
+            "field"      : "appID",
+            "description": "应用id"
+          },
+          {
+            "group"      : "Parameter",
+            "type"       : "Api_AESTHETICSLAB_PageParameter_Node",
+            "optional"   : false,
+            "field"      : "pageParameter",
+            "description": "分页参数"
+          }
+        ],
+        "Api_AESTHETICSLAB_PageParameter_Node": [
+          {
+            "group"      : "Api_AESTHETICSLAB_PageParameter_Node",
+            "type"       : "int",
+            "optional"   : false,
+            "field"      : "offset",
+            "description": "记录偏移量"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_PageParameter_Node",
+            "type"       : "int",
+            "optional"   : false,
+            "field"      : "limit",
+            "description": "返回记录最大数量"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Api_AESTHETICSLAB_ReviewDetailResp_Node": [
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewDetailResp_Node",
+            "type"       : "string",
+            "optional"   : false,
+            "field"      : "avatar",
+            "description": "头像"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewDetailResp_Node",
+            "type"       : "string",
+            "optional"   : false,
+            "field"      : "nick",
+            "description": "昵称"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewDetailResp_Node",
+            "type"       : "Api_AESTHETICSLAB_ReviewInfo_Node",
+            "optional"   : false,
+            "field"      : "reviewInfo",
+            "description": "心得"
+          }
+        ],
+        "Api_AESTHETICSLAB_ReviewInfo_Node": [
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewInfo_Node",
+            "type"       : "int",
+            "optional"   : false,
+            "field"      : "id",
+            "description": "id"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewInfo_Node",
+            "type"       : "int",
+            "optional"   : false,
+            "field"      : "postId",
+            "description": "内容平台postId 评论点赞用"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewInfo_Node",
+            "type"       : "string",
+            "optional"   : false,
+            "field"      : "content",
+            "description": "心得内容"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ReviewInfo_Node",
+            "type"       : "List[Api_AESTHETICSLAB_ImageInfo_Node]",
+            "optional"   : false,
+            "field"      : "imageInfoList",
+            "description": "图片列表"
+          }
+        ],
+        "Api_AESTHETICSLAB_ImageInfo_Node": [
+          {
+            "group"      : "Api_AESTHETICSLAB_ImageInfo_Node",
+            "type"       : "string",
+            "optional"   : false,
+            "field"      : "url",
+            "description": "图片地址"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ImageInfo_Node",
+            "type"       : "short",
+            "optional"   : false,
+            "field"      : "height",
+            "description": "图片高度"
+          },
+          {
+            "group"      : "Api_AESTHETICSLAB_ImageInfo_Node",
+            "type"       : "short",
+            "optional"   : false,
+            "field"      : "width",
+            "description": "图片宽度"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error": [
+          {
+            "group"      : "Error",
+            "type"       : "SYSTEM_ERROR_51800001",
+            "optional"   : false,
+            "field"      : "51800001",
+            "description": "系统错误"
+          },
+          {
+            "group"      : "Error",
+            "type"       : "PARAMETER_ERROR_51800002",
+            "optional"   : false,
+            "field"      : "51800002",
+            "description": "参数错误"
+          }
+        ]
+      }
+    },
+    "version"   : "0.0.0",
+    "filename"  : "/Users/czx/Documents/product/Electron/electron-vue/src/renderer/assets/example/getReviewDetail.js",
+    "groupTitle": "node_aestheticslab",
+    "name"      : "PostNode_aestheticslabGetreviewdetail"
+  }
+]

@@ -51,14 +51,17 @@
     }
   },
   "dependencies": {
+    "apidoc-core": "^0.8.3",
     "axios": "^0.18.0",
     "element-ui": "^2.6.3",
+    "fs-extra": "^7.0.1",
     "lodash": "^4.17.11",
     "vue": "^2.6.10",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0",
-    "vuex-electron": "^1.0.3"
+    "vuex-electron": "^1.0.3",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "ajv": "^6.5.0",

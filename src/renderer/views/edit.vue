@@ -22,11 +22,12 @@
 <script>
 import { remote } from "electron";
 import fs from "fs";
-import parser from "./../assets/utils/parser.js";
+import { createDoc } from "./../assets/utils/parser.js";
 
 export default {
   name: "edit",
   created() {
+    createDoc();
     this.docPath = localStorage.getItem("docPath") || "";
     this.infoPath = localStorage.getItem("infoPath") || "";
   },
@@ -72,7 +73,7 @@ export default {
     getApiDoc(docPath) {
       const docStr = fs.readFileSync(docPath).toString();
       // parse(docStr);
-      parser(docPath);
+
       // console.log("TCL: getApiDoc -> docStr", parse(docStr));
     }
   }
